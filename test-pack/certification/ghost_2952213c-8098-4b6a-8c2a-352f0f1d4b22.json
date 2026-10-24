@@ -1,0 +1,26 @@
+{
+  "destination_id": "2952213c-8098-4b6a-8c2a-352f0f1d4b22",
+  "name": "Local Ghost",
+  "connector_key": "ghost",
+  "job_id": "cb9e05a0-af85-451c-ac37-38873f5edf9f",
+  "status": "succeeded",
+  "duration_s": 2.719,
+  "result": {
+    "status": "failed",
+    "duration_s": 2.5948260000004666,
+    "certification_run_id": "cc0d3528-7497-4e60-9ace-a665625e2d5f",
+    "evidence": {
+      "steps": [
+        {
+          "step": "validate",
+          "result": {
+            "ok": true,
+            "violations": []
+          }
+        }
+      ],
+      "error": "('PLATFORM_UNAVAILABLE', 'Platform request failed: All connection attempts failed')"
+    }
+  },
+  "error": null
+}

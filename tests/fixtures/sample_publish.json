@@ -1,0 +1,11 @@
+{
+  "destination_id": "REPLACE_AT_RUNTIME",
+  "rendition": {
+    "title": "Hello from Outpost",
+    "body": "Test publish via batch runner.",
+    "content_type": "text",
+    "is_promotional": false,
+    "is_ai_generated": false
+  },
+  "is_test": true
+}

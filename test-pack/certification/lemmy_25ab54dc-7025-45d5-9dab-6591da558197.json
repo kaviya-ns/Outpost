@@ -1,0 +1,26 @@
+{
+  "destination_id": "25ab54dc-7025-45d5-9dab-6591da558197",
+  "name": "Local Lemmy",
+  "connector_key": "lemmy",
+  "job_id": "522d8d09-527f-431d-8c3c-b06c5748bf54",
+  "status": "succeeded",
+  "duration_s": 2.64,
+  "result": {
+    "status": "failed",
+    "duration_s": 2.5496780000012222,
+    "certification_run_id": "748ac036-0d81-49e7-9945-a93cc598e1e8",
+    "evidence": {
+      "steps": [
+        {
+          "step": "validate",
+          "result": {
+            "ok": true,
+            "violations": []
+          }
+        }
+      ],
+      "error": "('PLATFORM_UNAVAILABLE', 'Platform request failed: All connection attempts failed')"
+    }
+  },
+  "error": null
+}

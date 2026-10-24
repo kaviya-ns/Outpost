@@ -1,0 +1,46 @@
+{
+  "destination_id": "f929d9c2-83bd-4445-8539-564d4e743a25",
+  "name": "Manual Community (Assisted)",
+  "connector_key": "assisted",
+  "job_id": "5194cd2b-5b6f-4004-b195-4f5237c02510",
+  "status": "succeeded",
+  "duration_s": 30.796,
+  "result": {
+    "status": "passed",
+    "duration_s": 30.49567070000012,
+    "certification_run_id": "9fb1eded-21ac-474b-a4b2-810fbd4abf76",
+    "evidence": {
+      "steps": [
+        {
+          "step": "validate",
+          "result": {
+            "ok": true,
+            "violations": []
+          }
+        },
+        {
+          "step": "publish",
+          "result": {
+            "platform_post_id": "assist-cert-f929d9c2-83bd-4445-8539-564",
+            "live_url": "http://localhost:8000/api/v1/files/local/assist-packs/8e6b3f684c484e17b2b89212037dba19",
+            "status": "assist_pack_ready"
+          }
+        },
+        {
+          "step": "get_status",
+          "result": {
+            "status": "assist_pack_ready",
+            "live_url": null
+          }
+        },
+        {
+          "step": "delete",
+          "result": {
+            "deleted": true
+          }
+        }
+      ]
+    }
+  },
+  "error": null
+}

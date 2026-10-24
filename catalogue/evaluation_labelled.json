@@ -1,0 +1,127 @@
+{
+  "version": "1.0",
+  "description": "Labelled content items for recommender precision@10 evaluation. relevant_connector_keys must exist in the destination catalogue.",
+  "items": [
+    {
+      "id": "eval-001",
+      "rendition": {
+        "title": "How we shipped an AI feature in our SaaS",
+        "body": "A founder playbook for B2B teams adopting LLM agents in production.",
+        "hashtags": ["ai", "saas"],
+        "is_promotional": false,
+        "content_type": "text"
+      },
+      "relevant_connector_keys": ["devto", "ghost", "discourse"]
+    },
+    {
+      "id": "eval-002",
+      "rendition": {
+        "title": "Question: best workflow for creator marketing videos?",
+        "body": "Looking for community advice on editing and distribution for YouTube creators.",
+        "hashtags": ["video", "creators"],
+        "content_type": "video_link"
+      },
+      "relevant_connector_keys": ["discourse", "lemmy", "devto"]
+    },
+    {
+      "id": "eval-003",
+      "rendition": {
+        "title": "Our product launch — 50% off this week",
+        "body": "Promotional post for our new marketing automation tool.",
+        "is_promotional": true,
+        "content_type": "text"
+      },
+      "relevant_connector_keys": ["ghost", "webhook_hmac"]
+    },
+    {
+      "id": "eval-004",
+      "rendition": {
+        "title": "Deep dive: building a video pipeline for startups",
+        "body": "Longform essay on founder-led content strategy and SaaS growth loops.",
+        "hashtags": ["founders", "video", "saas"],
+        "content_type": "text"
+      },
+      "relevant_connector_keys": ["ghost", "devto"]
+    },
+    {
+      "id": "eval-005",
+      "rendition": {
+        "title": "Open-source community discussion thread",
+        "body": "What are your favorite tools for indie hackers and creator communities?",
+        "hashtags": ["creators", "founders"],
+        "content_type": "text"
+      },
+      "relevant_connector_keys": ["lemmy", "discourse"]
+    },
+    {
+      "id": "eval-006",
+      "rendition": {
+        "title": "Tutorial: FastAPI + machine learning deployment",
+        "body": "Engineering walkthrough with code samples for AI APIs.",
+        "hashtags": ["ai"],
+        "content_type": "text"
+      },
+      "relevant_connector_keys": ["devto", "discourse"]
+    },
+    {
+      "id": "eval-007",
+      "rendition": {
+        "title": "Partner integration webhook payload spec",
+        "body": "B2B documentation for posting curated content to partner sites.",
+        "content_type": "text"
+      },
+      "relevant_connector_keys": ["webhook_hmac", "ghost"]
+    },
+    {
+      "id": "eval-008",
+      "rendition": {
+        "title": "AI-generated weekly roundup",
+        "body": "This digest was generated with AI assistance for marketing teams.",
+        "is_ai_generated": true,
+        "hashtags": ["marketing", "ai"],
+        "content_type": "text"
+      },
+      "relevant_connector_keys": ["ghost", "devto", "discourse"]
+    },
+    {
+      "id": "eval-009",
+      "rendition": {
+        "title": "Manual posting required — policy-sensitive announcement",
+        "body": "Content for a community that does not allow automation.",
+        "content_type": "text"
+      },
+      "relevant_connector_keys": ["assisted", "discourse"]
+    },
+    {
+      "id": "eval-010",
+      "rendition": {
+        "title": "Growth marketing experiments for SaaS founders",
+        "body": "Sharing campaign results and creator-led distribution tactics.",
+        "hashtags": ["marketing", "saas", "founders"],
+        "content_type": "text"
+      },
+      "relevant_connector_keys": ["ghost", "devto", "discourse"]
+    },
+    {
+      "id": "eval-011",
+      "rendition": {
+        "title": "Lemmy: federated communities for tech discussion",
+        "body": "Why open communities matter for developer content.",
+        "hashtags": ["creators"],
+        "content_type": "text"
+      },
+      "relevant_connector_keys": ["lemmy", "discourse"]
+    },
+    {
+      "id": "eval-012",
+      "rendition": {
+        "title": "Behind the scenes: our video editor for creators",
+        "body": "Product story with streaming workflow tips.",
+        "hashtags": ["video", "creators"],
+        "is_promotional": true,
+        "content_type": "video_link"
+      },
+      "relevant_connector_keys": ["ghost", "webhook_hmac"]
+    }
+  ]
+}

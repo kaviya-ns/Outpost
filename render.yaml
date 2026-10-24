@@ -1,0 +1,33 @@
+# Render Blueprint — https://render.com/docs/blueprint-spec
+# Connect repo → New Blueprint → select this file.
+services:
+  - type: web
+    name: outpost-api
+    runtime: docker
+    plan: starter
+    healthCheckPath: /api/v1/health
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: S3_ENABLED
+        value: false
+      - key: SIMULATION_MODE
+        value: true
+      - key: RECERT_SCHEDULER_ENABLED
+        value: true
+      - key: RATE_LIMIT_PER_MINUTE
+        value: 120
+      - key: DATABASE_URL
+        fromDatabase:
+          name: outpost-db
+          property: connectionString
+      - key: DEMO_API_KEY
+        generateValue: true
+      - key: PUBLIC_BASE_URL
+        sync: false
+    buildCommand: ""
+    dockerCommand: ""
+
+databases:
+  - name: outpost-db
+    plan: basic-256mb

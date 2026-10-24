@@ -1,0 +1,32 @@
+[
+  {
+    "connector": "discourse",
+    "file": "test-pack\\certification\\discourse_e1ff6e18-8e08-4c36-b702-d166fa5af71f.json",
+    "status": "succeeded"
+  },
+  {
+    "connector": "lemmy",
+    "file": "test-pack\\certification\\lemmy_25ab54dc-7025-45d5-9dab-6591da558197.json",
+    "status": "succeeded"
+  },
+  {
+    "connector": "devto",
+    "file": "test-pack\\certification\\devto_719351d1-b8ce-41ea-91c3-da57d1f4281c.json",
+    "status": "succeeded"
+  },
+  {
+    "connector": "ghost",
+    "file": "test-pack\\certification\\ghost_2952213c-8098-4b6a-8c2a-352f0f1d4b22.json",
+    "status": "succeeded"
+  },
+  {
+    "connector": "webhook_hmac",
+    "file": "test-pack\\certification\\webhook_hmac_287777c8-912c-4e6a-a098-ce41ad1780d8.json",
+    "status": "succeeded"
+  },
+  {
+    "connector": "assisted",
+    "file": "test-pack\\certification\\assisted_f929d9c2-83bd-4445-8539-564d4e743a25.json",
+    "status": "succeeded"
+  }
+]

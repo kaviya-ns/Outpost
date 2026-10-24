@@ -1,0 +1,26 @@
+{
+  "destination_id": "e1ff6e18-8e08-4c36-b702-d166fa5af71f",
+  "name": "Mock Discourse Forum",
+  "connector_key": "discourse",
+  "job_id": "cb450f57-54c7-4a39-84e4-8fd4a1434dc9",
+  "status": "succeeded",
+  "duration_s": 2.944,
+  "result": {
+    "status": "failed",
+    "duration_s": 2.6051315999993676,
+    "certification_run_id": "bdf2fa05-ad6e-4267-bcdc-7ad5dd98aa97",
+    "evidence": {
+      "steps": [
+        {
+          "step": "validate",
+          "result": {
+            "ok": true,
+            "violations": []
+          }
+        }
+      ],
+      "error": "('PLATFORM_UNAVAILABLE', 'Platform request failed: All connection attempts failed')"
+    }
+  },
+  "error": null
+}

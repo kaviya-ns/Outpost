@@ -1,0 +1,4 @@
+name,url,platform_key,connector_key,surface,language,relevance_score,relevance_reason
+Extra Forum,https://forum.example.com/t,discourse,discourse,topic,en,4,AI and SaaS audience
+Duplicate Forum,https://forum.example.com/t,discourse,discourse,topic,en,3,duplicate row test
+Bad URL,not-a-url,devto,devto,article,en,2,should error

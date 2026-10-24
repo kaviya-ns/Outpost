@@ -1,0 +1,26 @@
+{
+  "destination_id": "719351d1-b8ce-41ea-91c3-da57d1f4281c",
+  "name": "Mock Dev.to",
+  "connector_key": "devto",
+  "job_id": "c2b6393b-773b-45ae-803f-beaa73383185",
+  "status": "succeeded",
+  "duration_s": 2.69,
+  "result": {
+    "status": "failed",
+    "duration_s": 2.6158032000003004,
+    "certification_run_id": "5946b779-289a-40f7-bfdc-32299e87a92a",
+    "evidence": {
+      "steps": [
+        {
+          "step": "validate",
+          "result": {
+            "ok": true,
+            "violations": []
+          }
+        }
+      ],
+      "error": "('PLATFORM_UNAVAILABLE', 'Platform request failed: All connection attempts failed')"
+    }
+  },
+  "error": null
+}

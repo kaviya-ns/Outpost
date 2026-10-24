@@ -1,0 +1,811 @@
+{
+  "k": 10,
+  "items_evaluated": 12,
+  "precision_at_10_macro": 0.2333,
+  "per_item": [
+    {
+      "item_id": "eval-001",
+      "precision_at_10": 0.3,
+      "relevant_count": 3,
+      "top_recommendations": [
+        {
+          "destination_id": "f929d9c2-83bd-4445-8539-564d4e743a25",
+          "name": "Manual Community (Assisted)",
+          "connector_key": "assisted",
+          "platform_key": "manual",
+          "score": 12.0,
+          "reason": "certified (L3+)",
+          "certified": true,
+          "publish_enabled": true
+        },
+        {
+          "destination_id": "719351d1-b8ce-41ea-91c3-da57d1f4281c",
+          "name": "Mock Dev.to",
+          "connector_key": "devto",
+          "platform_key": "devto",
+          "score": 9.0,
+          "reason": "platform fit (devto)",
+          "certified": false,
+          "publish_enabled": true
+        },
+        {
+          "destination_id": "287777c8-912c-4e6a-a098-ce41ad1780d8",
+          "name": "Partner Webhook",
+          "connector_key": "webhook_hmac",
+          "platform_key": "partner",
+          "score": 9.0,
+          "reason": "platform fit (webhook_hmac)",
+          "certified": false,
+          "publish_enabled": true
+        },
+        {
+          "destination_id": "e1ff6e18-8e08-4c36-b702-d166fa5af71f",
+          "name": "Mock Discourse Forum",
+          "connector_key": "discourse",
+          "platform_key": "discourse",
+          "score": 4.0,
+          "reason": "baseline catalogue entry",
+          "certified": false,
+          "publish_enabled": true
+        },
+        {
+          "destination_id": "25ab54dc-7025-45d5-9dab-6591da558197",
+          "name": "Local Lemmy",
+          "connector_key": "lemmy",
+          "platform_key": "lemmy",
+          "score": 4.0,
+          "reason": "baseline catalogue entry",
+          "certified": false,
+          "publish_enabled": true
+        },
+        {
+          "destination_id": "2952213c-8098-4b6a-8c2a-352f0f1d4b22",
+          "name": "Local Ghost",
+          "connector_key": "ghost",
+          "platform_key": "ghost",
+          "score": 4.0,
+          "reason": "baseline catalogue entry",
+          "certified": false,
+          "publish_enabled": true
+        }
+      ]
+    },
+    {
+      "item_id": "eval-002",
+      "precision_at_10": 0.3,
+      "relevant_count": 3,
+      "top_recommendations": [
+        {
+          "destination_id": "e1ff6e18-8e08-4c36-b702-d166fa5af71f",
+          "name": "Mock Discourse Forum",
+          "connector_key": "discourse",
+          "platform_key": "discourse",
+          "score": 12.0,
+          "reason": "platform fit (discourse)",
+          "certified": false,
+          "publish_enabled": true
+        },
+        {
+          "destination_id": "f929d9c2-83bd-4445-8539-564d4e743a25",
+          "name": "Manual Community (Assisted)",
+          "connector_key": "assisted",
+          "platform_key": "manual",
+          "score": 12.0,
+          "reason": "certified (L3+)",
+          "certified": true,
+          "publish_enabled": true
+        },
+        {
+          "destination_id": "25ab54dc-7025-45d5-9dab-6591da558197",
+          "name": "Local Lemmy",
+          "connector_key": "lemmy",
+          "platform_key": "lemmy",
+          "score": 9.0,
+          "reason": "platform fit (lemmy)",
+          "certified": false,
+          "publish_enabled": true
+        },
+        {
+          "destination_id": "719351d1-b8ce-41ea-91c3-da57d1f4281c",
+          "name": "Mock Dev.to",
+          "connector_key": "devto",
+          "platform_key": "devto",
+          "score": 7.0,
+          "reason": "baseline catalogue entry",
+          "certified": false,
+          "publish_enabled": true
+        },
+        {
+          "destination_id": "2952213c-8098-4b6a-8c2a-352f0f1d4b22",
+          "name": "Local Ghost",
+          "connector_key": "ghost",
+          "platform_key": "ghost",
+          "score": 7.0,
+          "reason": "baseline catalogue entry",
+          "certified": false,
+          "publish_enabled": true
+        },
+        {
+          "destination_id": "287777c8-912c-4e6a-a098-ce41ad1780d8",
+          "name": "Partner Webhook",
+          "connector_key": "webhook_hmac",
+          "platform_key": "partner",
+          "score": 4.0,
+          "reason": "baseline catalogue entry",
+          "certified": false,
+          "publish_enabled": true
+        }
+      ]
+    },
+    {
+      "item_id": "eval-003",
+      "precision_at_10": 0.2,
+      "relevant_count": 2,
+      "top_recommendations": [
+        {
+          "destination_id": "f929d9c2-83bd-4445-8539-564d4e743a25",
+          "name": "Manual Community (Assisted)",
+          "connector_key": "assisted",
+          "platform_key": "manual",
+          "score": 12.0,
+          "reason": "certified (L3+)",
+          "certified": true,
+          "publish_enabled": true
+        },
+        {
+          "destination_id": "e1ff6e18-8e08-4c36-b702-d166fa5af71f",
+          "name": "Mock Discourse Forum",
+          "connector_key": "discourse",
+          "platform_key": "discourse",
+          "score": 4.0,
+          "reason": "baseline catalogue entry",
+          "certified": false,
+          "publish_enabled": true
+        },
+        {
+          "destination_id": "25ab54dc-7025-45d5-9dab-6591da558197",
+          "name": "Local Lemmy",
+          "connector_key": "lemmy",
+          "platform_key": "lemmy",
+          "score": 4.0,
+          "reason": "baseline catalogue entry",
+          "certified": false,
+          "publish_enabled": true
+        },
+        {
+          "destination_id": "719351d1-b8ce-41ea-91c3-da57d1f4281c",
+          "name": "Mock Dev.to",
+          "connector_key": "devto",
+          "platform_key": "devto",
+          "score": 4.0,
+          "reason": "baseline catalogue entry",
+          "certified": false,
+          "publish_enabled": true
+        },
+        {
+          "destination_id": "2952213c-8098-4b6a-8c2a-352f0f1d4b22",
+          "name": "Local Ghost",
+          "connector_key": "ghost",
+          "platform_key": "ghost",
+          "score": 4.0,
+          "reason": "baseline catalogue entry",
+          "certified": false,
+          "publish_enabled": true
+        },
+        {
+          "destination_id": "287777c8-912c-4e6a-a098-ce41ad1780d8",
+          "name": "Partner Webhook",
+          "connector_key": "webhook_hmac",
+          "platform_key": "partner",
+          "score": 4.0,
+          "reason": "baseline catalogue entry",
+          "certified": false,
+          "publish_enabled": true
+        }
+      ]
+    },
+    {
+      "item_id": "eval-004",
+      "precision_at_10": 0.2,
+      "relevant_count": 2,
+      "top_recommendations": [
+        {
+          "destination_id": "f929d9c2-83bd-4445-8539-564d4e743a25",
+          "name": "Manual Community (Assisted)",
+          "connector_key": "assisted",
+          "platform_key": "manual",
+          "score": 12.0,
+          "reason": "certified (L3+)",
+          "certified": true,
+          "publish_enabled": true
+        },
+        {
+          "destination_id": "719351d1-b8ce-41ea-91c3-da57d1f4281c",
+          "name": "Mock Dev.to",
+          "connector_key": "devto",
+          "platform_key": "devto",
+          "score": 9.0,
+          "reason": "platform fit (devto)",
+          "certified": false,
+          "publish_enabled": true
+        },
+        {
+          "destination_id": "2952213c-8098-4b6a-8c2a-352f0f1d4b22",
+          "name": "Local Ghost",
+          "connector_key": "ghost",
+          "platform_key": "ghost",
+          "score": 9.0,
+          "reason": "platform fit (ghost)",
+          "certified": false,
+          "publish_enabled": true
+        },
+        {
+          "destination_id": "e1ff6e18-8e08-4c36-b702-d166fa5af71f",
+          "name": "Mock Discourse Forum",
+          "connector_key": "discourse",
+          "platform_key": "discourse",
+          "score": 4.0,
+          "reason": "baseline catalogue entry",
+          "certified": false,
+          "publish_enabled": true
+        },
+        {
+          "destination_id": "25ab54dc-7025-45d5-9dab-6591da558197",
+          "name": "Local Lemmy",
+          "connector_key": "lemmy",
+          "platform_key": "lemmy",
+          "score": 4.0,
+          "reason": "baseline catalogue entry",
+          "certified": false,
+          "publish_enabled": true
+        },
+        {
+          "destination_id": "287777c8-912c-4e6a-a098-ce41ad1780d8",
+          "name": "Partner Webhook",
+          "connector_key": "webhook_hmac",
+          "platform_key": "partner",
+          "score": 4.0,
+          "reason": "baseline catalogue entry",
+          "certified": false,
+          "publish_enabled": true
+        }
+      ]
+    },
+    {
+      "item_id": "eval-005",
+      "precision_at_10": 0.2,
+      "relevant_count": 2,
+      "top_recommendations": [
+        {
+          "destination_id": "f929d9c2-83bd-4445-8539-564d4e743a25",
+          "name": "Manual Community (Assisted)",
+          "connector_key": "assisted",
+          "platform_key": "manual",
+          "score": 12.0,
+          "reason": "certified (L3+)",
+          "certified": true,
+          "publish_enabled": true
+        },
+        {
+          "destination_id": "e1ff6e18-8e08-4c36-b702-d166fa5af71f",
+          "name": "Mock Discourse Forum",
+          "connector_key": "discourse",
+          "platform_key": "discourse",
+          "score": 9.0,
+          "reason": "platform fit (discourse)",
+          "certified": false,
+          "publish_enabled": true
+        },
+        {
+          "destination_id": "25ab54dc-7025-45d5-9dab-6591da558197",
+          "name": "Local Lemmy",
+          "connector_key": "lemmy",
+          "platform_key": "lemmy",
+          "score": 9.0,
+          "reason": "platform fit (lemmy)",
+          "certified": false,
+          "publish_enabled": true
+        },
+        {
+          "destination_id": "719351d1-b8ce-41ea-91c3-da57d1f4281c",
+          "name": "Mock Dev.to",
+          "connector_key": "devto",
+          "platform_key": "devto",
+          "score": 4.0,
+          "reason": "baseline catalogue entry",
+          "certified": false,
+          "publish_enabled": true
+        },
+        {
+          "destination_id": "2952213c-8098-4b6a-8c2a-352f0f1d4b22",
+          "name": "Local Ghost",
+          "connector_key": "ghost",
+          "platform_key": "ghost",
+          "score": 4.0,
+          "reason": "baseline catalogue entry",
+          "certified": false,
+          "publish_enabled": true
+        },
+        {
+          "destination_id": "287777c8-912c-4e6a-a098-ce41ad1780d8",
+          "name": "Partner Webhook",
+          "connector_key": "webhook_hmac",
+          "platform_key": "partner",
+          "score": 4.0,
+          "reason": "baseline catalogue entry",
+          "certified": false,
+          "publish_enabled": true
+        }
+      ]
+    },
+    {
+      "item_id": "eval-006",
+      "precision_at_10": 0.2,
+      "relevant_count": 2,
+      "top_recommendations": [
+        {
+          "destination_id": "f929d9c2-83bd-4445-8539-564d4e743a25",
+          "name": "Manual Community (Assisted)",
+          "connector_key": "assisted",
+          "platform_key": "manual",
+          "score": 12.0,
+          "reason": "certified (L3+)",
+          "certified": true,
+          "publish_enabled": true
+        },
+        {
+          "destination_id": "719351d1-b8ce-41ea-91c3-da57d1f4281c",
+          "name": "Mock Dev.to",
+          "connector_key": "devto",
+          "platform_key": "devto",
+          "score": 9.0,
+          "reason": "platform fit (devto)",
+          "certified": false,
+          "publish_enabled": true
+        },
+        {
+          "destination_id": "e1ff6e18-8e08-4c36-b702-d166fa5af71f",
+          "name": "Mock Discourse Forum",
+          "connector_key": "discourse",
+          "platform_key": "discourse",
+          "score": 4.0,
+          "reason": "baseline catalogue entry",
+          "certified": false,
+          "publish_enabled": true
+        },
+        {
+          "destination_id": "25ab54dc-7025-45d5-9dab-6591da558197",
+          "name": "Local Lemmy",
+          "connector_key": "lemmy",
+          "platform_key": "lemmy",
+          "score": 4.0,
+          "reason": "baseline catalogue entry",
+          "certified": false,
+          "publish_enabled": true
+        },
+        {
+          "destination_id": "2952213c-8098-4b6a-8c2a-352f0f1d4b22",
+          "name": "Local Ghost",
+          "connector_key": "ghost",
+          "platform_key": "ghost",
+          "score": 4.0,
+          "reason": "baseline catalogue entry",
+          "certified": false,
+          "publish_enabled": true
+        },
+        {
+          "destination_id": "287777c8-912c-4e6a-a098-ce41ad1780d8",
+          "name": "Partner Webhook",
+          "connector_key": "webhook_hmac",
+          "platform_key": "partner",
+          "score": 4.0,
+          "reason": "baseline catalogue entry",
+          "certified": false,
+          "publish_enabled": true
+        }
+      ]
+    },
+    {
+      "item_id": "eval-007",
+      "precision_at_10": 0.2,
+      "relevant_count": 2,
+      "top_recommendations": [
+        {
+          "destination_id": "f929d9c2-83bd-4445-8539-564d4e743a25",
+          "name": "Manual Community (Assisted)",
+          "connector_key": "assisted",
+          "platform_key": "manual",
+          "score": 12.0,
+          "reason": "certified (L3+)",
+          "certified": true,
+          "publish_enabled": true
+        },
+        {
+          "destination_id": "287777c8-912c-4e6a-a098-ce41ad1780d8",
+          "name": "Partner Webhook",
+          "connector_key": "webhook_hmac",
+          "platform_key": "partner",
+          "score": 9.0,
+          "reason": "platform fit (webhook_hmac)",
+          "certified": false,
+          "publish_enabled": true
+        },
+        {
+          "destination_id": "e1ff6e18-8e08-4c36-b702-d166fa5af71f",
+          "name": "Mock Discourse Forum",
+          "connector_key": "discourse",
+          "platform_key": "discourse",
+          "score": 4.0,
+          "reason": "baseline catalogue entry",
+          "certified": false,
+          "publish_enabled": true
+        },
+        {
+          "destination_id": "25ab54dc-7025-45d5-9dab-6591da558197",
+          "name": "Local Lemmy",
+          "connector_key": "lemmy",
+          "platform_key": "lemmy",
+          "score": 4.0,
+          "reason": "baseline catalogue entry",
+          "certified": false,
+          "publish_enabled": true
+        },
+        {
+          "destination_id": "719351d1-b8ce-41ea-91c3-da57d1f4281c",
+          "name": "Mock Dev.to",
+          "connector_key": "devto",
+          "platform_key": "devto",
+          "score": 4.0,
+          "reason": "baseline catalogue entry",
+          "certified": false,
+          "publish_enabled": true
+        },
+        {
+          "destination_id": "2952213c-8098-4b6a-8c2a-352f0f1d4b22",
+          "name": "Local Ghost",
+          "connector_key": "ghost",
+          "platform_key": "ghost",
+          "score": 4.0,
+          "reason": "baseline catalogue entry",
+          "certified": false,
+          "publish_enabled": true
+        }
+      ]
+    },
+    {
+      "item_id": "eval-008",
+      "precision_at_10": 0.3,
+      "relevant_count": 3,
+      "top_recommendations": [
+        {
+          "destination_id": "f929d9c2-83bd-4445-8539-564d4e743a25",
+          "name": "Manual Community (Assisted)",
+          "connector_key": "assisted",
+          "platform_key": "manual",
+          "score": 12.0,
+          "reason": "certified (L3+)",
+          "certified": true,
+          "publish_enabled": true
+        },
+        {
+          "destination_id": "719351d1-b8ce-41ea-91c3-da57d1f4281c",
+          "name": "Mock Dev.to",
+          "connector_key": "devto",
+          "platform_key": "devto",
+          "score": 9.0,
+          "reason": "platform fit (devto)",
+          "certified": false,
+          "publish_enabled": true
+        },
+        {
+          "destination_id": "e1ff6e18-8e08-4c36-b702-d166fa5af71f",
+          "name": "Mock Discourse Forum",
+          "connector_key": "discourse",
+          "platform_key": "discourse",
+          "score": 4.0,
+          "reason": "baseline catalogue entry",
+          "certified": false,
+          "publish_enabled": true
+        },
+        {
+          "destination_id": "25ab54dc-7025-45d5-9dab-6591da558197",
+          "name": "Local Lemmy",
+          "connector_key": "lemmy",
+          "platform_key": "lemmy",
+          "score": 4.0,
+          "reason": "baseline catalogue entry",
+          "certified": false,
+          "publish_enabled": true
+        },
+        {
+          "destination_id": "2952213c-8098-4b6a-8c2a-352f0f1d4b22",
+          "name": "Local Ghost",
+          "connector_key": "ghost",
+          "platform_key": "ghost",
+          "score": 4.0,
+          "reason": "baseline catalogue entry",
+          "certified": false,
+          "publish_enabled": true
+        },
+        {
+          "destination_id": "287777c8-912c-4e6a-a098-ce41ad1780d8",
+          "name": "Partner Webhook",
+          "connector_key": "webhook_hmac",
+          "platform_key": "partner",
+          "score": 4.0,
+          "reason": "baseline catalogue entry",
+          "certified": false,
+          "publish_enabled": true
+        }
+      ]
+    },
+    {
+      "item_id": "eval-009",
+      "precision_at_10": 0.2,
+      "relevant_count": 2,
+      "top_recommendations": [
+        {
+          "destination_id": "f929d9c2-83bd-4445-8539-564d4e743a25",
+          "name": "Manual Community (Assisted)",
+          "connector_key": "assisted",
+          "platform_key": "manual",
+          "score": 17.0,
+          "reason": "platform fit (assisted); certified (L3+)",
+          "certified": true,
+          "publish_enabled": true
+        },
+        {
+          "destination_id": "e1ff6e18-8e08-4c36-b702-d166fa5af71f",
+          "name": "Mock Discourse Forum",
+          "connector_key": "discourse",
+          "platform_key": "discourse",
+          "score": 9.0,
+          "reason": "platform fit (discourse)",
+          "certified": false,
+          "publish_enabled": true
+        },
+        {
+          "destination_id": "25ab54dc-7025-45d5-9dab-6591da558197",
+          "name": "Local Lemmy",
+          "connector_key": "lemmy",
+          "platform_key": "lemmy",
+          "score": 9.0,
+          "reason": "platform fit (lemmy)",
+          "certified": false,
+          "publish_enabled": true
+        },
+        {
+          "destination_id": "719351d1-b8ce-41ea-91c3-da57d1f4281c",
+          "name": "Mock Dev.to",
+          "connector_key": "devto",
+          "platform_key": "devto",
+          "score": 4.0,
+          "reason": "baseline catalogue entry",
+          "certified": false,
+          "publish_enabled": true
+        },
+        {
+          "destination_id": "2952213c-8098-4b6a-8c2a-352f0f1d4b22",
+          "name": "Local Ghost",
+          "connector_key": "ghost",
+          "platform_key": "ghost",
+          "score": 4.0,
+          "reason": "baseline catalogue entry",
+          "certified": false,
+          "publish_enabled": true
+        },
+        {
+          "destination_id": "287777c8-912c-4e6a-a098-ce41ad1780d8",
+          "name": "Partner Webhook",
+          "connector_key": "webhook_hmac",
+          "platform_key": "partner",
+          "score": 4.0,
+          "reason": "baseline catalogue entry",
+          "certified": false,
+          "publish_enabled": true
+        }
+      ]
+    },
+    {
+      "item_id": "eval-010",
+      "precision_at_10": 0.3,
+      "relevant_count": 3,
+      "top_recommendations": [
+        {
+          "destination_id": "f929d9c2-83bd-4445-8539-564d4e743a25",
+          "name": "Manual Community (Assisted)",
+          "connector_key": "assisted",
+          "platform_key": "manual",
+          "score": 12.0,
+          "reason": "certified (L3+)",
+          "certified": true,
+          "publish_enabled": true
+        },
+        {
+          "destination_id": "719351d1-b8ce-41ea-91c3-da57d1f4281c",
+          "name": "Mock Dev.to",
+          "connector_key": "devto",
+          "platform_key": "devto",
+          "score": 9.0,
+          "reason": "platform fit (devto)",
+          "certified": false,
+          "publish_enabled": true
+        },
+        {
+          "destination_id": "e1ff6e18-8e08-4c36-b702-d166fa5af71f",
+          "name": "Mock Discourse Forum",
+          "connector_key": "discourse",
+          "platform_key": "discourse",
+          "score": 4.0,
+          "reason": "baseline catalogue entry",
+          "certified": false,
+          "publish_enabled": true
+        },
+        {
+          "destination_id": "25ab54dc-7025-45d5-9dab-6591da558197",
+          "name": "Local Lemmy",
+          "connector_key": "lemmy",
+          "platform_key": "lemmy",
+          "score": 4.0,
+          "reason": "baseline catalogue entry",
+          "certified": false,
+          "publish_enabled": true
+        },
+        {
+          "destination_id": "2952213c-8098-4b6a-8c2a-352f0f1d4b22",
+          "name": "Local Ghost",
+          "connector_key": "ghost",
+          "platform_key": "ghost",
+          "score": 4.0,
+          "reason": "baseline catalogue entry",
+          "certified": false,
+          "publish_enabled": true
+        },
+        {
+          "destination_id": "287777c8-912c-4e6a-a098-ce41ad1780d8",
+          "name": "Partner Webhook",
+          "connector_key": "webhook_hmac",
+          "platform_key": "partner",
+          "score": 4.0,
+          "reason": "baseline catalogue entry",
+          "certified": false,
+          "publish_enabled": true
+        }
+      ]
+    },
+    {
+      "item_id": "eval-011",
+      "precision_at_10": 0.2,
+      "relevant_count": 2,
+      "top_recommendations": [
+        {
+          "destination_id": "f929d9c2-83bd-4445-8539-564d4e743a25",
+          "name": "Manual Community (Assisted)",
+          "connector_key": "assisted",
+          "platform_key": "manual",
+          "score": 12.0,
+          "reason": "certified (L3+)",
+          "certified": true,
+          "publish_enabled": true
+        },
+        {
+          "destination_id": "e1ff6e18-8e08-4c36-b702-d166fa5af71f",
+          "name": "Mock Discourse Forum",
+          "connector_key": "discourse",
+          "platform_key": "discourse",
+          "score": 9.0,
+          "reason": "platform fit (discourse)",
+          "certified": false,
+          "publish_enabled": true
+        },
+        {
+          "destination_id": "25ab54dc-7025-45d5-9dab-6591da558197",
+          "name": "Local Lemmy",
+          "connector_key": "lemmy",
+          "platform_key": "lemmy",
+          "score": 9.0,
+          "reason": "platform fit (lemmy)",
+          "certified": false,
+          "publish_enabled": true
+        },
+        {
+          "destination_id": "719351d1-b8ce-41ea-91c3-da57d1f4281c",
+          "name": "Mock Dev.to",
+          "connector_key": "devto",
+          "platform_key": "devto",
+          "score": 9.0,
+          "reason": "platform fit (devto)",
+          "certified": false,
+          "publish_enabled": true
+        },
+        {
+          "destination_id": "2952213c-8098-4b6a-8c2a-352f0f1d4b22",
+          "name": "Local Ghost",
+          "connector_key": "ghost",
+          "platform_key": "ghost",
+          "score": 4.0,
+          "reason": "baseline catalogue entry",
+          "certified": false,
+          "publish_enabled": true
+        },
+        {
+          "destination_id": "287777c8-912c-4e6a-a098-ce41ad1780d8",
+          "name": "Partner Webhook",
+          "connector_key": "webhook_hmac",
+          "platform_key": "partner",
+          "score": 4.0,
+          "reason": "baseline catalogue entry",
+          "certified": false,
+          "publish_enabled": true
+        }
+      ]
+    },
+    {
+      "item_id": "eval-012",
+      "precision_at_10": 0.2,
+      "relevant_count": 2,
+      "top_recommendations": [
+        {
+          "destination_id": "f929d9c2-83bd-4445-8539-564d4e743a25",
+          "name": "Manual Community (Assisted)",
+          "connector_key": "assisted",
+          "platform_key": "manual",
+          "score": 12.0,
+          "reason": "certified (L3+)",
+          "certified": true,
+          "publish_enabled": true
+        },
+        {
+          "destination_id": "e1ff6e18-8e08-4c36-b702-d166fa5af71f",
+          "name": "Mock Discourse Forum",
+          "connector_key": "discourse",
+          "platform_key": "discourse",
+          "score": 7.0,
+          "reason": "baseline catalogue entry",
+          "certified": false,
+          "publish_enabled": true
+        },
+        {
+          "destination_id": "719351d1-b8ce-41ea-91c3-da57d1f4281c",
+          "name": "Mock Dev.to",
+          "connector_key": "devto",
+          "platform_key": "devto",
+          "score": 7.0,
+          "reason": "baseline catalogue entry",
+          "certified": false,
+          "publish_enabled": true
+        },
+        {
+          "destination_id": "2952213c-8098-4b6a-8c2a-352f0f1d4b22",
+          "name": "Local Ghost",
+          "connector_key": "ghost",
+          "platform_key": "ghost",
+          "score": 7.0,
+          "reason": "baseline catalogue entry",
+          "certified": false,
+          "publish_enabled": true
+        },
+        {
+          "destination_id": "25ab54dc-7025-45d5-9dab-6591da558197",
+          "name": "Local Lemmy",
+          "connector_key": "lemmy",
+          "platform_key": "lemmy",
+          "score": 4.0,
+          "reason": "baseline catalogue entry",
+          "certified": false,
+          "publish_enabled": true
+        },
+        {
+          "destination_id": "287777c8-912c-4e6a-a098-ce41ad1780d8",
+          "name": "Partner Webhook",
+          "connector_key": "webhook_hmac",
+          "platform_key": "partner",
+          "score": 4.0,
+          "reason": "baseline catalogue entry",
+          "certified": false,
+          "publish_enabled": true
+        }
+      ]
+    }
+  ]
+}

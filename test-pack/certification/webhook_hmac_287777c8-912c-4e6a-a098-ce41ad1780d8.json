@@ -1,0 +1,26 @@
+{
+  "destination_id": "287777c8-912c-4e6a-a098-ce41ad1780d8",
+  "name": "Partner Webhook",
+  "connector_key": "webhook_hmac",
+  "job_id": "0c70b679-de51-4416-aad8-70a168db7438",
+  "status": "succeeded",
+  "duration_s": 2.607,
+  "result": {
+    "status": "failed",
+    "duration_s": 2.498419300000023,
+    "certification_run_id": "a69785fa-f56b-452b-b670-7f9cecba0f9d",
+    "evidence": {
+      "steps": [
+        {
+          "step": "validate",
+          "result": {
+            "ok": true,
+            "violations": []
+          }
+        }
+      ],
+      "error": "('PLATFORM_UNAVAILABLE', 'All connection attempts failed')"
+    }
+  },
+  "error": null
+}
