@@ -4,7 +4,7 @@ from pathlib import Path
 
 from fastapi import FastAPI, Request
 from fastapi.exceptions import RequestValidationError
-from fastapi.responses import JSONResponse
+from fastapi.responses import JSONResponse, RedirectResponse
 
 from app.api.connector_routes import router as connector_router
 from app.api.v1.router import api_router
@@ -40,6 +40,12 @@ app = FastAPI(
 settings = get_settings()
 app.include_router(api_router, prefix=settings.api_prefix)
 app.include_router(connector_router)
+
+
+@app.get("/", include_in_schema=False)
+async def root():
+    """Render health checks hit /; send humans to API docs."""
+    return RedirectResponse(url="/docs")
 
 
 @app.middleware("http")
