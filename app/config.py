@@ -50,6 +50,8 @@ class Settings(BaseSettings):
     devto_mock_url: str = "http://localhost:8082"
     webhook_partner_url: str = "http://localhost:8083"
     lemmy_base_url: str = "http://localhost:8536"
+    lemmy_jwt: str = ""
+    lemmy_community_id: int = 1
     ghost_url: str = "http://localhost:2368"
     ghost_admin_api_key: str = ""
 

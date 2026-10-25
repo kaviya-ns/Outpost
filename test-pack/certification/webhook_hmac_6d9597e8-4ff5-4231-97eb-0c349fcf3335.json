@@ -1,0 +1,46 @@
+{
+  "destination_id": "6d9597e8-4ff5-4231-97eb-0c349fcf3335",
+  "name": "Partner Webhook",
+  "connector_key": "webhook_hmac",
+  "job_id": "97ce5fe6-8d48-4a69-a5f3-2374f314aaa7",
+  "status": "succeeded",
+  "duration_s": 0.287,
+  "result": {
+    "status": "passed",
+    "duration_s": 0.04253728300000148,
+    "certification_run_id": "0510a760-756c-4639-bf84-96cf03fbdc12",
+    "evidence": {
+      "steps": [
+        {
+          "step": "validate",
+          "result": {
+            "ok": true,
+            "violations": []
+          }
+        },
+        {
+          "step": "publish",
+          "result": {
+            "platform_post_id": "64237016-d219-4063-831a-cfb56cd39e91",
+            "live_url": "http://mock-webhook/posts/64237016-d219-4063-831a-cfb56cd39e91",
+            "status": "published"
+          }
+        },
+        {
+          "step": "get_status",
+          "result": {
+            "status": "live",
+            "live_url": "http://mock-webhook/posts/64237016-d219-4063-831a-cfb56cd39e91"
+          }
+        },
+        {
+          "step": "delete",
+          "result": {
+            "deleted": true
+          }
+        }
+      ]
+    }
+  },
+  "error": null
+}

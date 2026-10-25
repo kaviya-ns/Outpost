@@ -1,0 +1,46 @@
+{
+  "destination_id": "9687804d-a620-4563-bbaa-effe55c9557b",
+  "name": "Mock Dev.to",
+  "connector_key": "devto",
+  "job_id": "203ec402-e805-4e4d-8119-81519580584d",
+  "status": "succeeded",
+  "duration_s": 0.285,
+  "result": {
+    "status": "passed",
+    "duration_s": 0.037320005000083256,
+    "certification_run_id": "f1e72d1d-f201-4471-b371-169c57534000",
+    "evidence": {
+      "steps": [
+        {
+          "step": "validate",
+          "result": {
+            "ok": true,
+            "violations": []
+          }
+        },
+        {
+          "step": "publish",
+          "result": {
+            "platform_post_id": "100",
+            "live_url": "http://mock-devto/articles/100",
+            "status": "published"
+          }
+        },
+        {
+          "step": "get_status",
+          "result": {
+            "status": "live",
+            "live_url": "http://mock-devto/articles/100"
+          }
+        },
+        {
+          "step": "delete",
+          "result": {
+            "deleted": true
+          }
+        }
+      ]
+    }
+  },
+  "error": null
+}

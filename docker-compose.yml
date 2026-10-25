@@ -15,15 +15,44 @@ services:
       DISCOURSE_MOCK_URL: http://mocks:8080
       DEVTO_MOCK_URL: http://mocks:8080
       WEBHOOK_PARTNER_URL: http://mocks:8080
-      LEMMY_BASE_URL: http://mocks:8080
-      GHOST_URL: http://mocks:8080
+      LEMMY_BASE_URL: http://lemmy:8536
+      GHOST_URL: http://ghost:2368
       PUBLIC_BASE_URL: http://localhost:8000
     depends_on:
-      - postgres
-      - mocks
+      postgres:
+        condition: service_healthy
+      mocks:
+        condition: service_started
+      ghost:
+        condition: service_started
+      lemmy:
+        condition: service_started
+      platform-bootstrap:
+        condition: service_completed_successfully
     volumes:
       - ./data:/app/data
       - ./connectors:/app/connectors
+
+  platform-bootstrap:
+    build: .
+    command: ["python", "scripts/wait_and_bootstrap_platforms.py"]
+    environment:
+      LEMMY_BASE_URL: http://lemmy:8536
+      GHOST_URL: http://ghost:2368
+      MAILPIT_URL: http://mailpit:8025
+      DATABASE_URL: postgresql+asyncpg://outpost:outpost@postgres:5432/outpost
+    depends_on:
+      ghost:
+        condition: service_started
+      mailpit:
+        condition: service_started
+      lemmy:
+        condition: service_started
+    volumes:
+      - ./data:/app/data
+      - ./app:/app/app
+      - ./scripts:/app/scripts
+    restart: "no"
 
   mocks:
     build: ./mocks
@@ -40,10 +69,76 @@ services:
       - "5432:5432"
     volumes:
       - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U outpost -d outpost"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  mailpit:
+    image: axllent/mailpit:v1.21
+    ports:
+      - "8025:8025"
+    environment:
+      MP_SMTP_AUTH_ACCEPT_ANY: "1"
+      MP_SMTP_AUTH_ALLOW_INSECURE: "1"
+
+  ghost:
+    image: ghost:5-alpine
+    ports:
+      - "2368:2368"
+    environment:
+      url: http://localhost:2368
+      NODE_ENV: development
+      database__client: sqlite3
+      mail__transport: SMTP
+      mail__options__host: mailpit
+      mail__options__port: "1025"
+      mail__options__secure: "false"
+      mail__from: "noreply@example.com"
+      security__staffDeviceVerification: "false"
+    depends_on:
+      - mailpit
+    volumes:
+      - ghost_data:/var/lib/ghost/content
+
+  lemmy-postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: lemmy
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: lemmy
+    volumes:
+      - lemmy_pg:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U lemmy -d lemmy"]
+      interval: 5s
+      timeout: 5s
+      retries: 15
+
+  pictrs:
+    image: asonix/pictrs:0.5
+    environment:
+      PICTRS__SERVER__API_KEY: my-pictrs-key
+    user: "991:991"
+    volumes:
+      - pictrs_data:/mnt
+
+  lemmy:
+    image: dessalines/lemmy:0.19.6
+    ports:
+      - "8536:8536"
+    volumes:
+      - ./docker/lemmy/lemmy.hjson:/config/config.hjson:ro
+    depends_on:
+      lemmy-postgres:
+        condition: service_healthy
+      pictrs:
+        condition: service_started
+    # Lemmy image has no wget/curl; bootstrap waits on /api/v3/site instead of healthcheck.
+    restart: unless-stopped
 
   # Optional: docker compose --profile minio up --build
-  # If pull fails on Docker Hub, run: docker login
-  # or use a pinned tag below after logging in.
   minio:
     profiles: ["minio"]
     image: minio/minio:RELEASE.2024-11-07T00-52-20Z
@@ -57,23 +152,9 @@ services:
     volumes:
       - miniodata:/data
 
-  # Optional real Ghost for extended testing (profile: real-ghost)
-  ghost:
-    image: ghost:5-alpine
-    profiles: ["real-ghost"]
-    ports:
-      - "2368:2368"
-    environment:
-      url: http://localhost:2368
-      NODE_ENV: development
-
-  # Optional real Lemmy stack is heavy; mocks cover certification in default compose.
-  lemmy:
-    image: dessalines/lemmy:0.19.6
-    profiles: ["real-lemmy"]
-    ports:
-      - "8536:8536"
-
 volumes:
   pgdata:
   miniodata:
+  ghost_data:
+  lemmy_pg:
+  pictrs_data:

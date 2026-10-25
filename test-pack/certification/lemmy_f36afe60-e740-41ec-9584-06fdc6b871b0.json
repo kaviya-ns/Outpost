@@ -1,0 +1,41 @@
+{
+  "destination_id": "f36afe60-e740-41ec-9584-06fdc6b871b0",
+  "name": "Local Lemmy",
+  "connector_key": "lemmy",
+  "job_id": "1fa6cb17-1a2e-48c2-ab57-67a4e7cd6fbe",
+  "status": "succeeded",
+  "duration_s": 0.271,
+  "result": {
+    "status": "failed",
+    "duration_s": 0.20758324600001288,
+    "certification_run_id": "1f73b900-26ec-4585-a6bc-8936969b3b3b",
+    "evidence": {
+      "steps": [
+        {
+          "step": "validate",
+          "result": {
+            "ok": true,
+            "violations": []
+          }
+        },
+        {
+          "step": "publish",
+          "result": {
+            "platform_post_id": "1",
+            "live_url": "https://localhost:8536/post/1",
+            "status": "published"
+          }
+        },
+        {
+          "step": "get_status",
+          "result": {
+            "status": "live",
+            "live_url": "https://localhost:8536/post/1"
+          }
+        }
+      ],
+      "error": "('PLATFORM_UNAVAILABLE', '404')"
+    }
+  },
+  "error": null
+}

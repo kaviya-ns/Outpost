@@ -1,10 +1,12 @@
-# Render Blueprint — https://render.com/docs/blueprint-spec
-# Connect repo → New Blueprint → select this file.
+# Render Blueprint (FREE tier) — https://render.com/docs/blueprint-spec
+#
+# Database is NOT on Render (paid). Use Neon free Postgres and set DATABASE_URL manually.
+# See docs/DEPLOY.md
 services:
   - type: web
     name: outpost-api
     runtime: docker
-    plan: starter
+    plan: free
     healthCheckPath: /api/v1/health
     envVars:
       - key: APP_ENV
@@ -17,17 +19,11 @@ services:
         value: true
       - key: RATE_LIMIT_PER_MINUTE
         value: 120
+      # Create at https://neon.tech — paste connection string in Render dashboard after deploy
       - key: DATABASE_URL
-        fromDatabase:
-          name: outpost-db
-          property: connectionString
+        sync: false
       - key: DEMO_API_KEY
         generateValue: true
+      # Set to https://<your-service>.onrender.com after first deploy
       - key: PUBLIC_BASE_URL
         sync: false
-    buildCommand: ""
-    dockerCommand: ""
-
-databases:
-  - name: outpost-db
-    plan: basic-256mb

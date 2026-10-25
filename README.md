@@ -19,7 +19,7 @@ flowchart LR
 
 ## Live demo (cloud, laptop off)
 
-Deploy to **Render** with the included blueprint — see **[docs/DEPLOY.md](docs/DEPLOY.md)** for step-by-step (GitHub → Blueprint → HTTPS URL + demo token).
+Deploy for **$0** with **Render Free** + **Neon Postgres** — see **[docs/DEPLOY.md](docs/DEPLOY.md)** (GitHub → Blueprint → set `DATABASE_URL` → HTTPS URL + demo token).
 
 ## Quick start
 
@@ -31,14 +31,25 @@ pip install -r requirements.txt
 uvicorn app.main:app --reload
 ```
 
-Docker (API + Postgres + platform mocks; MinIO optional):
+Docker (API + Postgres + **Ghost** + **Lemmy** + mocks for Discourse/Dev.to/webhook; MinIO optional):
 
 ```bash
 docker compose up --build
 ```
 
+First boot runs `platform-bootstrap` (waits for Ghost/Lemmy, creates admin integration + Lemmy community, writes `data/local_platforms.json`). Allow **3–8 minutes** on first pull/start. Then:
+
+```bash
+pytest
+python scripts/run_certification.py --base-url http://localhost:8000
+```
+
 - API: http://localhost:8000/docs  
-- Mocks: http://localhost:8080/health  
+- Mocks (Discourse/Dev.to/webhook): http://localhost:8080/health  
+- Ghost: http://localhost:2368  
+- Lemmy: http://localhost:8536  
+
+Clean reset (wipe DB + platform state): `docker compose down -v` then `docker compose up --build` again.
 
 With object storage (after `docker login` if Hub blocks anonymous pulls):
 

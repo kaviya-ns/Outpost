@@ -43,8 +43,16 @@ async def seed_destinations(force: bool = False) -> None:
                 "relevance_score": 4,
                 "category": "community",
                 "connection": {
-                    "instance_params": {"base_url": settings.lemmy_base_url, "community_id": 1},
-                    "connection": {"credentials": {"base_url": settings.lemmy_base_url}},
+                    "instance_params": {
+                        "base_url": settings.lemmy_base_url,
+                        "community_id": settings.lemmy_community_id,
+                    },
+                    "connection": {
+                        "credentials": {
+                            "base_url": settings.lemmy_base_url,
+                            "jwt": settings.lemmy_jwt,
+                        }
+                    },
                 },
             },
             {
@@ -71,7 +79,12 @@ async def seed_destinations(force: bool = False) -> None:
                 "category": "blog",
                 "connection": {
                     "instance_params": {"base_url": settings.ghost_url},
-                    "connection": {"credentials": {"base_url": settings.ghost_url}},
+                    "connection": {
+                        "credentials": {
+                            "base_url": settings.ghost_url,
+                            "admin_api_key": settings.ghost_admin_api_key,
+                        }
+                    },
                 },
             },
             {
@@ -119,4 +132,38 @@ async def seed_destinations(force: bool = False) -> None:
                 category=row.get("category"),
             )
             db.add(dest)
+        await db.commit()
+
+
+async def refresh_platform_destination_credentials() -> None:
+    """Update Lemmy/Ghost destination credentials after platform bootstrap (existing DB)."""
+    from app.db import SessionLocal
+
+    settings = get_settings()
+    if not settings.lemmy_jwt and not settings.ghost_admin_api_key:
+        return
+    async with SessionLocal() as db:
+        result = await db.execute(select(Destination))
+        for dest in result.scalars().all():
+            if dest.connector_key == "lemmy" and settings.lemmy_jwt:
+                conn = dict(dest.connection or {})
+                inst = dict(conn.get("instance_params") or {})
+                inst["base_url"] = settings.lemmy_base_url
+                inst["community_id"] = settings.lemmy_community_id
+                cred = dict((conn.get("connection") or {}).get("credentials") or {})
+                cred["base_url"] = settings.lemmy_base_url
+                cred["jwt"] = settings.lemmy_jwt
+                conn["instance_params"] = inst
+                conn["connection"] = {"credentials": cred}
+                dest.connection = conn
+            if dest.connector_key == "ghost" and settings.ghost_admin_api_key:
+                conn = dict(dest.connection or {})
+                inst = dict(conn.get("instance_params") or {})
+                inst["base_url"] = settings.ghost_url
+                cred = dict((conn.get("connection") or {}).get("credentials") or {})
+                cred["base_url"] = settings.ghost_url
+                cred["admin_api_key"] = settings.ghost_admin_api_key
+                conn["instance_params"] = inst
+                conn["connection"] = {"credentials": cred}
+                dest.connection = conn
         await db.commit()

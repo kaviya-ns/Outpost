@@ -13,7 +13,8 @@ from app.db import init_db
 from app.errors import ApiError
 from app.logging_config import correlation_id_var, setup_logging
 from app.middleware.demo_security import demo_security_middleware
-from app.seed import seed_destinations
+from app.services.platform_bootstrap import ensure_local_platforms_ready
+from app.seed import refresh_platform_destination_credentials, seed_destinations
 from app.services.scheduler import start_recertification_scheduler, stop_recertification_scheduler
 
 
@@ -23,7 +24,9 @@ async def lifespan(_app: FastAPI):
     setup_logging(settings.log_level)
     Path("data").mkdir(exist_ok=True)
     await init_db()
+    ensure_local_platforms_ready()
     await seed_destinations()
+    await refresh_platform_destination_credentials()
     start_recertification_scheduler()
     yield
     stop_recertification_scheduler()

@@ -57,7 +57,9 @@ class LemmyConnector(ConnectorBase):
     async def get_status(self, platform_post_id: str, connection: Connection) -> dict[str, Any]:
         base = (connection.credentials.get("base_url") or get_settings().lemmy_base_url).rstrip("/")
         url = f"{base}/api/v3/post?id={platform_post_id}"
-        _, data = await request_json("GET", url, connector_key=self.key)
+        jwt = connection.credentials.get("jwt", "")
+        headers = {"Authorization": f"Bearer {jwt}"} if jwt else {}
+        _, data = await request_json("GET", url, connector_key=self.key, headers=headers)
         post = data.get("post_view", {}).get("post") or {}
         return {"status": "live" if post else "unknown", "live_url": post.get("ap_id")}
 

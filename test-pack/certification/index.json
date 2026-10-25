@@ -1,32 +1,32 @@
 [
   {
     "connector": "discourse",
-    "file": "test-pack\\certification\\discourse_e1ff6e18-8e08-4c36-b702-d166fa5af71f.json",
+    "file": "test-pack\\certification\\discourse_afd78470-6447-4704-b878-14efb34734c8.json",
     "status": "succeeded"
   },
   {
     "connector": "lemmy",
-    "file": "test-pack\\certification\\lemmy_25ab54dc-7025-45d5-9dab-6591da558197.json",
+    "file": "test-pack\\certification\\lemmy_f36afe60-e740-41ec-9584-06fdc6b871b0.json",
     "status": "succeeded"
   },
   {
     "connector": "devto",
-    "file": "test-pack\\certification\\devto_719351d1-b8ce-41ea-91c3-da57d1f4281c.json",
+    "file": "test-pack\\certification\\devto_9687804d-a620-4563-bbaa-effe55c9557b.json",
     "status": "succeeded"
   },
   {
     "connector": "ghost",
-    "file": "test-pack\\certification\\ghost_2952213c-8098-4b6a-8c2a-352f0f1d4b22.json",
+    "file": "test-pack\\certification\\ghost_532bf361-e8d2-4067-89cc-d6c1b0f57fbb.json",
     "status": "succeeded"
   },
   {
     "connector": "webhook_hmac",
-    "file": "test-pack\\certification\\webhook_hmac_287777c8-912c-4e6a-a098-ce41ad1780d8.json",
+    "file": "test-pack\\certification\\webhook_hmac_6d9597e8-4ff5-4231-97eb-0c349fcf3335.json",
     "status": "succeeded"
   },
   {
     "connector": "assisted",
-    "file": "test-pack\\certification\\assisted_f929d9c2-83bd-4445-8539-564d4e743a25.json",
+    "file": "test-pack\\certification\\assisted_4e083ed2-5666-40e4-a963-c7636f7fd153.json",
     "status": "succeeded"
   }
 ]

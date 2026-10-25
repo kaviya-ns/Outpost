@@ -1,0 +1,26 @@
+{
+  "destination_id": "532bf361-e8d2-4067-89cc-d6c1b0f57fbb",
+  "name": "Local Ghost",
+  "connector_key": "ghost",
+  "job_id": "81f836f3-e2bd-49ff-a472-73ddbc1aad3d",
+  "status": "succeeded",
+  "duration_s": 0.285,
+  "result": {
+    "status": "failed",
+    "duration_s": 0.02956664299995282,
+    "certification_run_id": "3e7c4d7f-5397-4dc9-af71-8528feec912c",
+    "evidence": {
+      "steps": [
+        {
+          "step": "validate",
+          "result": {
+            "ok": true,
+            "violations": []
+          }
+        }
+      ],
+      "error": "('CONNECTION_AUTH_EXPIRED', '{\"errors\":[{\"message\":\"Invalid API Key type\",\"context\":null,\"type\":\"UnauthorizedError\",\"details\":null,\"property\":null,\"help\":null,\"code\":\"INVALID_API_KEY_TYPE\",\"id\":\"feb2fcd0-cfd6-11f1-92c0-e169b39287a1\",\"ghostErrorCode\":null}]}')"
+    }
+  },
+  "error": null
+}
