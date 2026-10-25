@@ -1,0 +1,38 @@
+{
+  "version": "1.0",
+  "description": "Sample test set for POST /api/v1/recommend/evaluate/upload. Use relevant_connector_keys that exist in your destination catalogue (default seed: devto, discourse, ghost, lemmy, webhook_hmac, assisted). Optional: relevant_destination_ids or relevant_destination_names instead of connector keys.",
+  "items": [
+    {
+      "id": "sample-001",
+      "rendition": {
+        "title": "How we shipped an AI feature in our SaaS",
+        "body": "A founder playbook for B2B teams adopting LLM agents in production.",
+        "hashtags": ["ai", "saas"],
+        "is_promotional": false,
+        "is_ai_generated": false,
+        "content_type": "text"
+      },
+      "relevant_connector_keys": ["devto", "ghost", "discourse"]
+    },
+    {
+      "id": "sample-002",
+      "rendition": {
+        "title": "Our product launch — 50% off this week",
+        "body": "Promotional post for our new marketing automation tool.",
+        "hashtags": ["marketing", "saas"],
+        "is_promotional": true,
+        "content_type": "text"
+      },
+      "relevant_connector_keys": ["ghost", "webhook_hmac"]
+    },
+    {
+      "id": "sample-003",
+      "rendition": {
+        "title": "Manual posting required — policy-sensitive announcement",
+        "body": "Content for a community that does not allow automation.",
+        "content_type": "text"
+      },
+      "relevant_connector_keys": ["assisted", "discourse"]
+    }
+  ]
+}
