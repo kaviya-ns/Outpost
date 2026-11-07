@@ -1,4 +1,8 @@
-# IncuBrix Long-Tail Distribution (Assessment 4)
+# Outpost
+
+**Long-tail content distribution service** — one API to publish to Discourse, Lemmy, Dev.to, Ghost, signed webhooks, and assisted manual packs. Built for the IncuBrix Hackathon (Assessment 4).
+
+![Python](https://img.shields.io/badge/Python-3.11-3670A0?logo=python&logoColor=ffdd54) ![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?logo=postgresql&logoColor=white)
 
 Containerised **Python 3.11 + FastAPI** connector service for long-tail publishing destinations (Discourse, Lemmy, Dev.to, Ghost, HMAC webhook, assisted manual pack).
 
